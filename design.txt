@@ -1,0 +1,65 @@
+A Poker Texas Hold'em Game consists of the follow:
+
+Pre-Game (Table):
+# Determine number of players in game.
+# Determine who is human and who is a bot.
+# Determine Bot traits.
+# Start Game
+
+Game:
+# Shuffle
+# Designate someone as Dealer (advance clockwise from previous hand or at random)
+# Designate small and big blind and add money to pot.
+## If more than two players, clockwise of dealer.
+## If two players then dealer = small and other = big.
+# Deal 2 cards to each player.
+# Designate player to the left of the big blind as opening bet.
+# Wait for designated player to make a decision:
+## (if player bet is less max bet, fold)
+## (if player bet is equal max bet, check)
+## (if player bet is less max bet and player can match, call)
+## (if player has more money than max bet, raise)
+## (if player has more money than max bet, all in)
+# Based on decision, add bet money to pool, change designated opening better, remove player from game, etc.
+# Move on to the next player and repeat.
+# Once all bets are in and returning to opening better:
+## If number of remaining players is 1 then give pooled money to remaining player.
+## If one or less players have money left, ignore future betting phases and show all cards.
+## Reveal next card(s).
+## Reset designated opening better to player left of the dealer.
+## Repeat betting phase.
+# Once all cards have been revealed calculate hand scores.
+## Highest score(s) get first dibs on pot, limited to individual bet contribution.
+## If pool remains repeat.
+# Repeat from beginning.
+
+Client-side:
+* Player State
+** active
+** moneyReserves
+** moneyBet
+** buyinRemaining
+* Game State
+** moneyPool
+** moneyBetMax
+** playerDealer
+** playerPendingResponse
+
+Each game has:
+* playerDealer
+* playerMaxBetter
+* playerPendingResponse
+* moneyBetPool
+* moneyBlind
+* moneyBetMax
+
+Each player has:
+* moneyReserves
+* moneyBet
+* buyinRemaining
+* cards
+
+
+
+
+
