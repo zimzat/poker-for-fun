@@ -1,0 +1,25 @@
+{
+  "name": "poker-for-fun",
+  "version": "0.0.0",
+  "description": "Poker, for fun",
+  "main": "index.js",
+  "dependencies": {
+    "ws": "~0.4.32"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zimzat/poker-for-fun.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zimzat/poker-for-fun/issues"
+  },
+  "homepage": "https://github.com/zimzat/poker-for-fun"
+}
